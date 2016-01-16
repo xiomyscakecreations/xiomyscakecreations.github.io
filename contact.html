@@ -128,31 +128,27 @@
                     </h2>
                     <hr>
                     <p class="body text-center">We understand that you're busy and ordering your cake creation may not be at the top of the todo list. So, submit the form below with the requested information and we'll get back to you!</p>
-                    <form role="form" method="post" action="index.php">
+                    <form action="http://formspree.io/info@xiomyscakecreations.com" method="POST">
                         <div class="row">
                             <div class="form-group col-lg-4">
                                 <label for="name">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
-                                <?php echo "<p class='text-danger'>$errName</p>";?>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name">
                             </div>
                             <div class="form-group col-lg-4">
                                 <label for="email">Email Address</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="<?php echo htmlspecialchars($_POST['email']); ?>">
-                                <?php echo "<p class='text-danger'>$errEmail</p>";?>
+                                <input type="email" class="form-control" id="email" name="_replyto" placeholder="example@domain.com">
                             </div>
                             <div class="form-group col-lg-4">
                                 <label for="tel">Phone Number</label>
-                                <input type="tel" class="form-control" id="tel" name="tel" placeholder="(123) 456-7890" value="<?php echo htmlspecialchars($_POST['tel']); ?>">
-                                <?php echo "<p class='text-danger'>$errTel</p>";?>
+                                <input type="tel" class="form-control" id="tel" name="tel" placeholder="(123) 456-7890">
                             </div>
                             <div class="clearfix"></div>
                             <div class="form-group col-lg-12">
-                                <label >Message</label>
-                                <textarea class="form-control" rows="4" name="message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
-                                    <?php echo "<p class='text-danger'>$errMessage</p>";?>
+                                <label for="message">Message</label>
+                                <textarea class="form-control" rows="5" name="message">
                             </div>
                             <div class="form-group col-lg-12">
-                                <input type="hidden" name="save" value="contact">
+                                <input type="submit" value="Send">
                                 <button type="submit" class="btn btn-default">Submit</button>
                             </div>
                         </div>
