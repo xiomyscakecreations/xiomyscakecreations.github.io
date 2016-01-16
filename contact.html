@@ -128,27 +128,27 @@
                     </h2>
                     <hr>
                     <p class="body text-center">We understand that you're busy and ordering your cake creation may not be at the top of the todo list. So, submit the form below with the requested information and we'll get back to you!</p>
-                    <form action="http://formspree.io/info@xiomyscakecreations.com" method="POST">
+                    <form role="form" action="http://formspree.io/info@xiomyscakecreations.com" method="POST">
                         <div class="row">
                             <div class="form-group col-lg-4">
-                                <label for="name">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="First and Last Name">
+                                <label>Name</label>
+                                <input type="text" class="form-control" placeholder="First and Last Name">
                             </div>
                             <div class="form-group col-lg-4">
-                                <label for="email">Email Address</label>
-                                <input type="email" class="form-control" id="email" name="_replyto" placeholder="example@domain.com">
+                                <label>Email Address</label>
+                                <input type="email" class="form-control" placeholder="example@website.com">
                             </div>
                             <div class="form-group col-lg-4">
-                                <label for="tel">Phone Number</label>
-                                <input type="tel" class="form-control" id="tel" name="tel" placeholder="(123) 456-7890">
+                                <label>Phone Number</label>
+                                <input type="tel" class="form-control" placeholder="(123) 345-6789">
                             </div>
-                            <br>
+                            <div class="clearfix"></div>
                             <div class="form-group col-lg-12">
-                                <label for="message">Message</label>
-                                <textarea rows="5" name="message" placeholder="Your message.">
+                                <label>Message</label>
+                                <textarea class="form-control" rows="6"></textarea>
                             </div>
                             <div class="form-group col-lg-12">
-                                <input type="submit" value="Send">
+                                <input type="hidden" name="save" value="contact">
                                 <button type="submit" class="btn btn-default">Submit</button>
                             </div>
                         </div>
