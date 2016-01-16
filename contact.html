@@ -128,24 +128,28 @@
                     </h2>
                     <hr>
                     <p class="body text-center">We understand that you're busy and ordering your cake creation may not be at the top of the todo list. So, submit the form below with the requested information and we'll get back to you!</p>
-                    <form role="form">
+                    <form role="form" method="post" action="index.php">
                         <div class="row">
                             <div class="form-group col-lg-4">
-                                <label>Name</label>
-                                <input type="text" class="form-control">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
+                                <?php echo "<p class='text-danger'>$errName</p>";?>
                             </div>
                             <div class="form-group col-lg-4">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+                                <?php echo "<p class='text-danger'>$errEmail</p>";?>
                             </div>
                             <div class="form-group col-lg-4">
-                                <label>Phone Number</label>
-                                <input type="tel" class="form-control">
+                                <label for="tel">Phone Number</label>
+                                <input type="tel" class="form-control" id="tel" name="tel" placeholder="(123) 456-7890" value="<?php echo htmlspecialchars($_POST['tel']); ?>">
+                                <?php echo "<p class='text-danger'>$errTel</p>";?>
                             </div>
                             <div class="clearfix"></div>
                             <div class="form-group col-lg-12">
-                                <label>Message</label>
-                                <textarea class="form-control" rows="6"></textarea>
+                                <label >Message</label>
+                                <textarea class="form-control" rows="4" name="message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
+                                    <?php echo "<p class='text-danger'>$errMessage</p>";?>
                             </div>
                             <div class="form-group col-lg-12">
                                 <input type="hidden" name="save" value="contact">
